@@ -14,17 +14,14 @@ body {
   border-radius: 20px;
   position: relative;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   background-color: red;
+  gap: 15px;
 }
 
 .sm-container {
   border: 3px solid black;
   border-radius: 15px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background-color: aqua;
 }
 
@@ -70,4 +67,9 @@ body {
   align-items: center;
   justify-content: center;
   padding: 0;
+}
+
+.tasks-container {
+  background-color: greenyellow;
+  border: 3px solid black;
 }
