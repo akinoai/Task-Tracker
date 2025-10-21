@@ -11,8 +11,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
   </head>
+
   <body>
     <div class="container">
       <div class="sm-container">
@@ -21,39 +22,16 @@
         <div class="inputContainer">
           <input
             class="inputStroke"
+            id="inputStroke"
             placeholder="Start writing and press enter to create task"
           />
-          <button class="button">
+          <button class="button" id="enterButton">
             <img src="/icons/enter_white.svg" class="inputIcon" />
           </button>
         </div>
       </div>
 
-      <div class="tasks-container">
-        <div class="task">
-          <label class="checkbox">
-            <input type="checkbox" />
-            <span class="checkmark"></span>
-            Marking in complete will put it back in pending list
-          </label>
-
-          <button class="binButton">
-            <img class="bin" src="/icons/delete_black.svg" />
-          </button>
-        </div>
-
-        <div class="task">
-          <label class="checkbox">
-            <input type="checkbox" />
-            <span class="checkmark"></span>
-            Marking in complete will put it back in pending list
-          </label>
-
-          <button class="binButton">
-            <img class="bin" src="/icons/delete_black.svg" />
-          </button>
-        </div>
-      </div>
+      <div class="tasks-container" id="tasks-container"></div>
     </div>
   </body>
 </html>
