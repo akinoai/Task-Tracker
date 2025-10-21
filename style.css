@@ -37,7 +37,7 @@ body {
 }
 
 .inputStroke {
-  width: 550px;
+  width: 649px;
   border: 3px solid black;
   border-radius: 10px;
   padding-right: 50px;
@@ -72,4 +72,64 @@ body {
 .tasks-container {
   background-color: greenyellow;
   border: 3px solid black;
+  border-radius: 15px;
+  max-height: 600px;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 6px;
+  overscroll-behavior: contain;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+*::-webkit-scrollbar-button {
+  display: none;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 8px;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox input {
+  display: none;
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  border-radius: 4px;
+  background: white;
+  margin-right: 8px;
+  position: relative;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.checkbox input:checked + .checkmark {
+  background: rgb(164, 164, 164);
+}
+
+.binButton {
+  margin-left: auto;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
 }

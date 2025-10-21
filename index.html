@@ -1,31 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task Tracker</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
   </head>
   <body>
     <div class="container">
-        <div class="sm-container">
-            <p class="title">Task Tracker</p>
+      <div class="sm-container">
+        <p class="title">Task Tracker</p>
 
-            <div class="inputContainer">
-                <input class="inputStroke" placeholder="Start writing and press enter to create task">
-                <button class="button">
-                    <img src="/icons/enter_white.svg" class="inputIcon">
-                </button>
-            </div>
+        <div class="inputContainer">
+          <input
+            class="inputStroke"
+            placeholder="Start writing and press enter to create task"
+          />
+          <button class="button">
+            <img src="/icons/enter_white.svg" class="inputIcon" />
+          </button>
+        </div>
+      </div>
+
+      <div class="tasks-container">
+        <div class="task">
+          <label class="checkbox">
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+            Marking in complete will put it back in pending list
+          </label>
+
+          <button class="binButton">
+            <img class="bin" src="/icons/delete_black.svg" />
+          </button>
         </div>
 
-        <div class="tasks-container">
+        <div class="task">
+          <label class="checkbox">
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+            Marking in complete will put it back in pending list
+          </label>
 
+          <button class="binButton">
+            <img class="bin" src="/icons/delete_black.svg" />
+          </button>
         </div>
+      </div>
     </div>
   </body>
 </html>
