@@ -8,21 +8,20 @@ body {
 
 .container {
   padding: 30px;
-  width: 650px;
+  width: 40%;
+  min-width: 600px;
   height: 350px;
   border: 3px solid black;
   border-radius: 20px;
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: red;
+  align-items: center;
   gap: 15px;
 }
 
 .sm-container {
-  border: 3px solid black;
-  border-radius: 15px;
-  background-color: aqua;
+  width: 80%;
 }
 
 .title {
@@ -37,7 +36,7 @@ body {
 }
 
 .inputStroke {
-  width: 649px;
+  width: 100%;
   border: 3px solid black;
   border-radius: 10px;
   padding-right: 50px;
@@ -70,8 +69,7 @@ body {
 }
 
 .tasks-container {
-  background-color: greenyellow;
-  border: 3px solid black;
+  width: 80%;
   border-radius: 15px;
   max-height: 600px;
   flex: 1 1 auto;
@@ -99,6 +97,19 @@ body {
   display: flex;
   align-items: center;
   padding: 5px 10px;
+  color: black;
+  border-bottom: 1px solid rgb(180, 179, 179);
+}
+
+.task.completed {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  color: rgb(180, 179, 179);
+  text-decoration: line-through black;
+  border-bottom: 1px solid rgb(180, 179, 179);
+  transition: all 0.3s ease;
+  transform: scale(0.98);
 }
 
 .checkbox {

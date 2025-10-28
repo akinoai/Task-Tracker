@@ -9,22 +9,40 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
+document.addEventListener("change", (event) => {
+  if (event.target.matches('.task input[type="checkbox"]')) {
+    const task = event.target.closest(".task");
+    task.classList.toggle("completed", event.target.checked);
+  }
+});
+
+document.addEventListener("click", (event) => {
+  // перевіряємо, чи клік був саме по кнопці видалення
+  if (event.target.closest(".binButton")) {
+    const task = event.target.closest(".task");
+    if (task) {
+      task.remove(); // видаляємо елемент із DOM
+    }
+  }
+});
+
 function addNewTask() {
-  const text = inputStroke.value.trim(); // отримуємо текст без пробілів
+  const text = inputStroke.value.trim();
   if (text === "") return;
 
-  const newTask = `<div class="task">
-          <label class="checkbox">
-            <input type="checkbox" />
-            <span class="checkmark"></span>
-            ${text}
-          </label>
+  const el = document.createElement("div");
+  el.className = "task";
+  el.innerHTML = `
+    <label class="checkbox">
+      <input type="checkbox" />
+      <span class="checkmark"></span>
+      ${text}
+    </label>
+    <button class="binButton">
+      <img class="bin" src="/icons/delete_black.svg" />
+    </button>
+  `;
 
-          <button class="binButton">
-            <img class="bin" src="/icons/delete_black.svg" />
-          </button>
-        </div>`;
-
-  container.innerHTML += newTask;
+  container.prepend(el);
   inputStroke.value = "";
 }
