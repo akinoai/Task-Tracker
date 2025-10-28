@@ -3,6 +3,11 @@ const enterButton = document.getElementById("enterButton");
 const inputStroke = document.getElementById("inputStroke");
 
 enterButton.addEventListener("click", addNewTask);
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    addNewTask();
+  }
+});
 
 function addNewTask() {
   const text = inputStroke.value.trim(); // отримуємо текст без пробілів
